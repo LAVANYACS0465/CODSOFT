@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lavanya's Portfolio</title>
+
+  <!-- Fonts & AOS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f9f3f3, #ffe8ec);
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 0 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #6a0572;
+    }
+
+    header p {
+      color: #9d4edd;
+      font-weight: 500;
+    }
+
+    section {
+      margin: 40px 0;
+    }
+
+    h2 {
+      text-align: center;
+      color: #560bad;
+      margin-bottom: 20px;
+    }
+
+    .about, .skills, .projects, .resume, .contact {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .about p, .contact p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      background: #ffffffcc;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      width: 160px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 0%;
+      border: 3px solid #d0bfff;
+    }
+
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .skills li {
+      background-color: #fcd5ce;
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-weight: 500;
+      box-shadow: 2px 2px 10px #ccc;
+    }
+
+    .project-card {
+      background: #fff;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    .resume a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #9d4edd;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 2px 2px 10px #ccc;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header data-aos="fade-down">
+    <h1>Lavanya C S</h1>
+    <p>Web Development Intern | CodSoft</p>
+  </header>
+
+  <section class="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <img src="lavanya.jpg" alt="Lavanya's Photo">
+    <p>
+      I’m Lavanya C S, B.E (ECE). I chose ECE because it gives me the best of both worlds – the logic and creativity of software, and the real-world impact of hardware. Over time, I’ve grown into someone who is committed to learning, adapting, and pushing beyond comfort zones.<br><br>
+      I’m passionate about tech, creative design, and growth. A volleyball player, anime lover, singer, dancer, and a video editor — I blend creativity, logic, and energy. I'm actively sharpening my coding skills and working toward top-tier placements with consistency and curiosity 🚀<br><br>
+      "Trusting the process, chasing growth, and vibing with purpose."
+    </p>
+  </section>
+
+  <section class="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Video Editing</li>
+      <li>Communication</li>
+      <li>Leadership</li>
+      <li>Responsive Design</li>
+      <li>Canva</li>
+    </ul>
+  </section>
+
+  <section class="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <h3>🌐 Landing Page</h3>
+      <p>Responsive landing page built using HTML and CSS.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>🧮 Calculator</h3>
+      <p>Basic calculator made with JavaScript.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>📋 To-Do List</h3>
+      <p>Manage your tasks using this simple JavaScript app.</p>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section class="resume" data-aos="fade-up">
+    <h2>Resume</h2>
+    <p style="text-align: center;">
+      <a href="https://drive.google.com/file/d/1p8Qn2n2juX4ruQW3L3QAijEYT7qsMAkU/view?usp=drivesdk" target="_blank">
+        📄 View My Resume
+      </a>
+    </p>
+  </section>
+
+  <section class="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Email: lavanyacs0465@gmail.com</p>
+    <p>Phone: 9448542469</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lavanya C S. All rights reserved.</p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
