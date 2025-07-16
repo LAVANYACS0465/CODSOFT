@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAVANYA'S ANIME WORLD</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Cute Stickers -->
+  <img src="https://pngimg.com/uploads/cloud/cloud_PNG27.png" class="sticker-left" alt="sticker" />
+  <img src="https://pngimg.com/uploads/cat/cat_PNG50524.png" class="sticker-right" alt="sticker" />
+
+  <!-- Falling Sakura Petals -->
+  <div class="petal petal1">🌸</div>
+  <div class="petal petal2">🌸</div>
+  <div class="petal petal3">🌸</div>
+  <div class="petal petal4">🌸</div>
+  <div class="petal petal5">🌸</div>
+
+  <header>
+    <h1>LAVANYA'S ANIME WORLD</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#explore">Explore</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm <strong>Lavanya C S</strong>, an Engineering student who loves anime 💫.
+    This site is made for anime fans to explore top series with banners, episodes, and more, I hope you'll like it💖.</p>
+  </section>
+
+  <section id="explore">
+    <h2>Explore Anime</h2>
+    <input type="text" id="searchBar" placeholder="Search anime...">
+    <div id="anime-container"></div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Name:</strong> Lavanya C S</p>
+    <p><strong>Phone:</strong> 9448542469</p>
+    <p><strong>Email:</strong> lavanyacs0465@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lavanya's Anime World. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const animeContainer = document.getElementById("anime-container");
+    const searchBar = document.getElementById("searchBar");
+    let animeList = [];
+
+    fetch("anime-data.json")
+      .then(response => response.json())
+      .then(data => {
+        animeList = data;
+        displayAnime(data);
+      });
+
+    function displayAnime(animes) {
+      animeContainer.innerHTML = "";
+      animes.forEach(anime => {
+        const card = document.createElement("div");
+        card.className = "anime-card";
+        card.innerHTML = `
+          <img src="${anime.banner}" alt="${anime.title}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/4712/4712107.png'">
+          <h3>${anime.title}</h3>
+          <p><strong>Episodes:</strong> ${anime.episodes}</p>
+          <p><strong>Seasons:</strong> ${anime.seasons}</p>
+          <p><strong>Released:</strong> ${anime.release_date}</p>
+          <p><strong>Category:</strong> ${anime.category || "N/A"}</p>
+        `;
+        animeContainer.appendChild(card);
+      });
+    }
+
+    searchBar.addEventListener("input", e => {
+      const query = e.target.value.toLowerCase();
+      const filtered = animeList.filter(anime => anime.title.toLowerCase().includes(query));
+      displayAnime(filtered);
+    });
+  </script>
+</body>
+</html>
